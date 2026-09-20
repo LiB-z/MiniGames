@@ -1,0 +1,34 @@
+export default {
+  extends: ['@commitlint/config-conventional'],
+
+  rules: {
+    'scope-case': [0],
+
+    'type-enum': [
+      2,
+      'always',
+      [
+        'init',
+        'build',
+        'chore',
+        'ci',
+        'docs',
+        'feat',
+        'fix',
+        'perf',
+        'refactor',
+        'revert',
+        'style',
+        'test',
+      ],
+    ],
+  },
+  prompt: {
+    messages: {},
+    questions: {
+      type: {
+        description: 'please input type:',
+      },
+    },
+  },
+};
